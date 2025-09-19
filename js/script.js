@@ -115,7 +115,6 @@ function displayTime() {
   let sec = time % 60;
   document.querySelector('.timer').innerHTML =
     `${min.toString().padStart(2, '0')} : ${sec.toString().padStart(2, '0')}`;
-
 }
 
 function startTime() {
@@ -150,8 +149,6 @@ buttons.forEach((btn) => {
       score++;
     } else {
       btn.style.backgroundColor = "red";
-      let correctBtn = [...buttons].find(b => b.textContent === q.answer);
-      if (correctBtn) correctBtn.style.backgroundColor = "green";
     }
 
     scoreDisplay.innerHTML = "Score: " + score;
